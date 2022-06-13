@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2>Listar Gyms</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Mensualidad</th>
+                        <th>Inscripcion</th>
+                        <th>Estado</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let g of gym">
+                        <td>{{g.id}}</td>
+                        <td>{{g.nombre}}</td>
+                        <td>{{g.mensualidad}}</td>
+                        <td>{{g.inscripcion}}</td>
+                        <td>{{g.estado}}</td>
+                        <td><button class="btn btn-warning" (click)="editar(g)">Editar</button></td>
+                        <td><button class="btn btn-danger" (click)="eliminar(g)">Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
